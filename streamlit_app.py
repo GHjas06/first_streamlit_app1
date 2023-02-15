@@ -23,3 +23,8 @@ streamlit.text(fruityvice_response)
 
 streamlit.header("Fruityvice Fruit Advice!")
 streamlit.text(fruityvice_response.json())
+
+# normalize the json data
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# tabular form
+streamlit.dataframe(fruityvice_normalized)
